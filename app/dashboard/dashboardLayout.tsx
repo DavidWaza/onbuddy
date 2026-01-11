@@ -20,7 +20,10 @@ export default function DashboardLayout({
       <Sidebar user={{ name: "Emediong", email: "emediong@onbuddy.app" }} />
       <main className="flex-1 overflow-auto bg-[#f5f5f5]">
         <DashboardHeader />
+        <div className="max-w-360 mx-auto">
+
         {children}
+        </div>
         <Footer />
       </main>
     </div>
