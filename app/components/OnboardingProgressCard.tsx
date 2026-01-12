@@ -2,6 +2,7 @@
 
 import React from "react";
 import FancyProgressBar from "./Progressbar";
+import MomentumStreak from "./MomentumStreak";
 
 interface OnboardingProgressCardProps {
   userName: string;
@@ -24,41 +25,37 @@ const OnboardingProgressCard: React.FC<OnboardingProgressCardProps> = ({
   totalSteps,
   milestones = [],
 }) => {
-  const progressPercentage = Math.round(
-    (completedTasks / totalTasks) * 100
-  );
+  const progressPercentage = Math.round((completedTasks / totalTasks) * 100);
 
   return (
     <div className="w-full bg-white border border-gray-200 shadow-xs p-10 space-y-3">
       {/* Header */}
-      <div>
-        <h1 className="font-extrabold tracking-tight uppercase text-2xl text-green-900">
-          Welcome Onboard, {userName}
-        </h1>
-        <p className="text-gray-800 font-medium mt-2">
-          You&apos;re in{" "}
-          <span className="font-bold uppercase text-green-900">
-            Week {currentWeek}
-          </span>{" "}
-          of your onboarding journey
-        </p>
+      <div className="flex justify-between items-center">
+        <div>
+          <h1 className="font-extrabold tracking-tight uppercase text-2xl text-green-900">
+            Welcome Onboard, {userName}
+          </h1>
+          <p className="text-gray-800 font-medium mt-2">
+            You&apos;re in{" "}
+            <span className="font-bold uppercase text-green-900">
+              Week {currentWeek}
+            </span>{" "}
+            of your onboarding journey
+          </p>
+        </div>
+        <MomentumStreak streakDays={6} benchmarkDay={5} />
       </div>
 
       {/* Meta Info */}
       <div className="text-sm font-medium text-gray-700 space-y-3">
         <div>
           Days Left:{" "}
-          <span className="font-bold text-green-900">
-            {totalDaysLeft} Days
-          </span>
+          <span className="font-bold text-green-900">{totalDaysLeft} Days</span>
         </div>
-        <div>
-          Step{" "}
-          <span className="font-bold text-green-900">
-            {currentStep}
-          </span>{" "}
+        {/* <div>
+          Step <span className="font-bold text-green-900">{currentStep}</span>{" "}
           of {totalSteps}
-        </div>
+        </div> */}
       </div>
 
       {/* Progress Bar */}
