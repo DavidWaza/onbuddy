@@ -29,7 +29,7 @@ const OnboardingProgressCard: React.FC<OnboardingProgressCardProps> = ({
   );
 
   return (
-    <div className="w-full bg-white border border-gray-200 shadow-xs p-10 space-y-6">
+    <div className="w-full bg-white border border-gray-200 shadow-xs p-10 space-y-3">
       {/* Header */}
       <div>
         <h1 className="font-extrabold tracking-tight uppercase text-2xl text-green-900">
@@ -45,7 +45,7 @@ const OnboardingProgressCard: React.FC<OnboardingProgressCardProps> = ({
       </div>
 
       {/* Meta Info */}
-      <div className="flex flex-wrap gap-6 text-sm font-medium text-gray-700">
+      <div className="text-sm font-medium text-gray-700 space-y-3">
         <div>
           Days Left:{" "}
           <span className="font-bold text-green-900">
@@ -73,7 +73,7 @@ const OnboardingProgressCard: React.FC<OnboardingProgressCardProps> = ({
       </div>
 
       {/* Milestones */}
-      {milestones.length > 0 && (
+      {/* {milestones.length > 0 && (
         <div className="pt-4">
           <p className="text-sm font-semibold uppercase text-gray-600 mb-3">
             Milestones Achieved
@@ -89,7 +89,7 @@ const OnboardingProgressCard: React.FC<OnboardingProgressCardProps> = ({
             ))}
           </div>
         </div>
-      )}
+      )} */}
 
       {/* Momentum Message */}
       {progressPercentage >= 50 && (

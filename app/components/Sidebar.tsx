@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import {
   House,
 //   Timeline,
@@ -52,11 +53,16 @@ export default function Sidebar({ user, onSignOut }: SidebarProps) {
       ${collapsed ? "w-20" : "w-64"}`}
     >
       {/* Header */}
-      <div className="flex items-center justify-between px-4 py-7.5 border-b border-gray-100">
+      <div className="flex items-center justify-between px-4 py-1 border-b border-gray-100">
         {!collapsed && (
-          <span className="text-lg text-gray-900 font-black">
-            OnBuddy
-          </span>
+          <Image
+            src="/Assets/onbuddy-logo-1.png"
+            alt="OnBuddy Logo"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-2/3 h-auto object-contain object-center"
+          />
         )}
         <button
           onClick={() => setCollapsed(!collapsed)}

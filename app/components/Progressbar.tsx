@@ -7,7 +7,7 @@ interface ProgressBarProps {
 
 const FancyProgressBar: React.FC<ProgressBarProps> = ({ value, label }) => {
   return (
-    <div className="w-full space-y-2">
+    <div className="w-full">
       {/* Label + Percentage */}
       <div className="flex items-center justify-between">
         <span className="text-xs font-medium uppercase tracking-wide text-gray-500">
