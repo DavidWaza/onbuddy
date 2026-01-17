@@ -21,7 +21,6 @@ const DashboardPage = () => {
         poster="/images/welcome-poster.jpg"
       />
       <QuickoverviewSection />
-
       <UserComponents />
       <RoleLearningPath role="Software Engineer" />
       <ToolsAndChannelsAccess />
