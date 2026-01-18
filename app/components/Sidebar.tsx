@@ -6,16 +6,14 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import {
   House,
-//   Timeline,
   CheckSquare,
   Users,
-//   HeartHandshake,
   SignOut,
   CaretLeft,
   CaretRight,
   HourglassLow,
 } from "@phosphor-icons/react";
-import { HeartHandshake } from "lucide-react";
+import { FolderClosed, HeartHandshake } from "lucide-react";
 
 type NavItem = {
   label: string;
@@ -26,6 +24,7 @@ type NavItem = {
 const navItems: NavItem[] = [
   { label: "Dashboard", href: "/dashboard", icon: <House size={20} /> },
   { label: "Timeline", href: "/timeline", icon: <HourglassLow size={20} /> },
+  {label: "Projects", href: '/projects', icon: <FolderClosed size={20} /> },
   { label: "Tasks", href: "/tasks", icon: <CheckSquare size={20} /> },
   { label: "People", href: "/people", icon: <Users size={20} /> },
   {

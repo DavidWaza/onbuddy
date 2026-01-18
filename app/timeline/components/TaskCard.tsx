@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import TaskDetailsModal from "./TaskDetailsModal";
@@ -81,7 +81,9 @@ export const TaskCard = ({
           `}
         >
           <div className="flex justify-between items-start mb-3">
-            <span className={`text-xs font-medium px-3 py-1 rounded-full ${styles.tag}`}>
+            <span
+              className={`text-xs font-medium px-3 py-1 rounded-full ${styles.tag}`}
+            >
               {styles.label}
             </span>
 
@@ -92,16 +94,15 @@ export const TaskCard = ({
             </div>
           </div>
 
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">
-            {title}
-          </h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
 
-          <p className="text-gray-500 mb-4">
-            {description}
-          </p>
+          <p className="text-gray-500 mb-4">{description}</p>
 
           <div className="flex items-center justify-between text-sm">
-            <span className="text-gray-400">{assigned}</span>
+            <span className="text-gray-400">
+              Assigned by{" "}
+              <span className="uppercase font-bold">{assigned}</span>
+            </span>
             <button
               onClick={() => setOpen(true)}
               className="text-orange-500 font-medium hover:underline"

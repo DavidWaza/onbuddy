@@ -55,11 +55,9 @@ export default function OnboardingTimeline() {
       <div className="h-0.75 w-full bg-orange-500 rounded-full mb-14" />
 
       {/* Timeline */}
-          <p className="text-sm text-orange-500 mb-2 text-right pb-3">January 2025</p>
-
       <div className="grid grid-cols-[120px_1fr] gap-x-10 gap-y-12">
         {/* Item 1 */}
-        <TimelineDate date="Jan 15" status="Done" color="green" />
+        <TimelineDate date="Jan 15" status="Active" color="blue" />
         <TaskCard
           title="Design Review"
           description="Review the new onboarding flow."
@@ -68,7 +66,7 @@ export default function OnboardingTimeline() {
         />
 
         {/* Item 2 */}
-        <TimelineDate date="Jan 17" status="Active" color="blue" />
+        <TimelineDate date="Jan 17" status="Done" color="green" />
         <TaskCard
           title="Final Approval"
           description="Approve production deployment."

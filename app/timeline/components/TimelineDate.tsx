@@ -17,9 +17,9 @@ export const TimelineDate = ({
     <div className="relative flex flex-col items-end pr-4">
       <p className="font-medium text-gray-900">{date}</p>
       <p className={`text-sm ${colorMap[color]}`}>{status}</p>
-      <span
+      {/* <span
         className={`absolute right-[-11px] top-2 h-3 w-3 rounded-full bg-${color}-500`}
-      />
+      /> */}
     </div>
   );
 };

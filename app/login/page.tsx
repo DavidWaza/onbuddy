@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { Code2 } from "lucide-react";
 import { Envelope, LockKey } from "@phosphor-icons/react";
+import Image from "next/image";
 
 type FormData = {
   email: string;
@@ -27,25 +28,27 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-white/90">
       <div className="w-100">
         {/* Logo and Header */}
         <div className="text-center mb-5">
-          <div className="inline-flex items-center justify-center gap-3 mb-6">
-            <div className="bg-white p-2.5 rounded-lg">
-              <Code2 className="w-7 h-7 text-black" strokeWidth={2} />
-            </div>
-            <h1 className="text-3xl font-bold text-white">
-              onBuddy
-            </h1>
+          <div className="">
+            <Image
+              src="/Assets/onbuddy-logo-1.png"
+              alt="OnBuddy Logo"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-full h-auto object-center object-contain"
+            />
           </div>
-          <p className="text-gray-400 text-base">Your best Onboarding Platform</p>
+          <p className="text-gray-400 text-base -mt-20 font-medium">Your Smart Onboarding Platform</p>
         </div>
 
         {/* Login Card */}
-        <div className="bg-white border border-gray-200 rounded-lg p-8">
+        <div className="bg-white border border-gray-200 p-8">
           <div className="mb-8">
-            <h2 className="text-xl font-semibold text-black mb-1">Welcome back</h2>
+            <h2 className="text-xl font-extrabold text-black mb-1 uppercase">Welcome back</h2>
             <p className="text-gray-600 text-sm">Sign in to your account</p>
           </div>
 
